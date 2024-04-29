@@ -2,7 +2,7 @@
 /**
  * Allow SVG through WordPress Media Uploader
  *
- * @package mountains
+ * @package la_mountains
  */
 
 /**

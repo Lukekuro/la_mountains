@@ -1,0 +1,49 @@
+.m-bg_gallery {
+	position: relative;
+	min-height: calc(100vh - var(--header-scrolled-height));
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: rem(100);
+	padding-top: rem(20);
+
+	&__bg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		&-overlay {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	&__content {
+		position: relative;
+	}
+
+	&__gallery {
+		position: relative;
+		background-color: rgba($primary, .4);
+		padding-top: rem(30);
+
+		.swiper {
+			padding-bottom: rem(40);
+			margin: rem(0 25);
+		}
+
+		.swiper-slide img {
+			object-fit: cover;
+			aspect-ratio: 1.6/1;
+		}
+
+		.swiper-pagination {
+			bottom: rem(20);
+		}
+	}
+}

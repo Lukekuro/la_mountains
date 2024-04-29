@@ -6,7 +6,6 @@ import {throttle} from './functions/throttle';
 // Plugins (NPM modules and uploaded files):
 import Swiper, {Navigation, Pagination, Autoplay, Thumbs} from 'swiper/bundle'; // import Swiper bundle with all modules installed
 // available Swiper.js modules = [Virtual, Keyboard, Mousewheel, Navigation, Pagination, Scrollbar, Parallax, Zoom, Lazy, Controller, A11y, History, HashNavigation, Autoplay, Thumbs, FreeMode, Grid, Manipulation, EffectFade, EffectCube, EffectFlip, EffectCoverflow, EffectCreative, EffectCards]
-import './vendors/jquery.nice-select.min.js'; // jQuery Nice Select
 import { Fancybox } from "@fancyapps/ui"; // Fancybox
 
 jQuery(document).ready(function ($) {
@@ -34,39 +33,24 @@ jQuery(document).ready(function ($) {
 
 
 	/**
-	 * Nice select
+	 * Slider gallery
 	 */
-	// do not activate NiceSelect on those pages, where it might conflict with Select2
-	if (!$('body').hasClass('woocommerce-account')) {
-		$('select').niceSelect();
-	}
-
-
-	/**
-	 * Trigger NiceSelect update after Woocommerce Update variations
-	 */
-	$(".variations_form").on("woocommerce_variation_has_changed", function () {
-		$('.variations_form select').niceSelect('update');
-	});
-
-
-	/**
-	 * Slider Images
-	 */
-	document.querySelectorAll('.swiper-images').forEach(slider => {
+	document.querySelectorAll( '.swiper-gallery' ).forEach(slider => {
 		const swiper = new Swiper(slider, {
-			loop: true,
-			autoplay: {
-				delay: 2500,
-				disableOnInteraction: false,
-			},
+			slidesPerView: 2,
+            slidesPerGroup: 1,
+            spaceBetween: 10,
+            breakpoints: {
+				640: {
+                    slidesPerView: 3,
+                },
+                1025: {
+                    slidesPerView: 4,
+                },
+            },
 			pagination: {
-				el: slider.querySelector('.swiper-pagination'),
+				el: slider.querySelector( '.swiper-pagination' ),
 				clickable: true,
-			},
-			navigation: {
-				nextEl: slider.querySelector('.swiper-button-next'),
-				prevEl: slider.querySelector('.swiper-button-prev'),
 			},
 			on: {
 				// lazy load images
@@ -85,3 +69,4 @@ jQuery(document).ready(function ($) {
 	$(window).trigger('scroll');
 
 });
+

@@ -2,7 +2,7 @@
 /**
  * Inline SVG
  *
- * @package mountainser
+ * @package la_mountainser
  */
 
 ?>

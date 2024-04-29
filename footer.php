@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package mountains
+ * @package la_mountains
  */
 
 $logo          = get_field( 'logo', 'option' );
@@ -18,9 +18,15 @@ $enable_to_top = get_field( 'enable_to_top', 'option' );
 <footer class="site-footer">
 	<div class="container">
 		<?php if ( $logo ) : ?>
-			<a href="<?php echo esc_url( home_url() ); ?>" class="site-logo" rel="home">
-				<?php echo wp_get_attachment_image( $logo, 'medium' ); ?>
-			</a>
+			<div class="site-block-logo">
+				<a href="<?php echo esc_url( home_url() ); ?>" class="site-logo" rel="home">
+					<?php echo wp_get_attachment_image( $logo, 'medium' ); ?>
+				</a>
+				<div class="logo-text">
+					<span><?php echo esc_html( 'losangeles' ); ?></span>
+					<span><?php echo esc_html( 'mountains' ); ?></span>
+				</div>
+			</div>
 		<?php endif; ?>
 
 		<?php
@@ -33,13 +39,7 @@ $enable_to_top = get_field( 'enable_to_top', 'option' );
 			)
 		);
 		?>
-	</div>
-
-	<div class="site-footer__copyright">
-		<div class="container">
-			<?php // translators: date. ?>
-			<span><?php echo sprintf( esc_html__( '&copy; %s All rights reserved', 'mountains' ), esc_html( date( 'Y' ) ) ); // @phpcs:disable ?></span>
-		</div>
+		<span class="site-footer__copyright"><?php echo sprintf( esc_html__( '&copy; %s All rights reserved', 'la_mountains' ), esc_html( date( 'Y' ) ) ); // @phpcs:disable ?></span>
 	</div>
 </footer>
 
@@ -50,7 +50,7 @@ $enable_to_top = get_field( 'enable_to_top', 'option' );
 		<svg>
 			<use xlink:href="#angle-up"></use>
 		</svg>
-		<span class="screen-reader-text"><?php esc_html_e( 'Scroll to top', 'mountains' ); ?></span>
+		<span class="screen-reader-text"><?php esc_html_e( 'Scroll to top', 'la_mountains' ); ?></span>
 	</a>
 <?php endif; ?>
 

@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/TinyMCE_Custom_Styles
  *
- * @package mountains
+ * @package la_mountains
  */
 
 /**
@@ -155,10 +155,13 @@ add_filter( 'tiny_mce_before_init', 'itm_tiny_mce_before_init_formats' );
 function itm_tiny_mce_before_init_colors( $init ) {
 	// By using the same array keys as the default values you'll override (replace) them.
 	$custom_colors = [
-		'Black'   => '000',
-		'White'   => 'fff',
-		'Grey'    => 'ccc',
-		'Primary' => 'b91c1c',
+		'Black'     => '000',
+		'White'     => 'fff',
+		'Grey'      => 'B0B4BE',
+		'Primary'   => '414F6B',
+		'Secondary' => '63769d',
+		'Dark Grey' => '4D4D4D',
+
 	];
 
 	$textcolor_map = [];

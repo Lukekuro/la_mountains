@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package mountains
+ * @package la_mountains
  */
 
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
@@ -29,4 +29,3 @@ require ITM_DIR . '/inc/lazy-load.php'; // Images and iframes lazyload.
 require ITM_DIR . '/inc/login.php'; // Login screen customisation.
 require ITM_DIR . '/inc/scripts-styles.php'; // Scripts and styles enqueue | dequeue.
 require ITM_DIR . '/inc/svg-support.php'; // Adds support for SVG upload.
-require ITM_DIR . '/inc/widgets.php'; // Sidebars and widgets.

@@ -4,7 +4,7 @@
  *
  * @link https://www.advancedcustomfields.com/resources/options-page/
  *
- * @package mountainser
+ * @package la_mountainser
  */
 
 if ( function_exists( 'acf_add_options_page' ) ) {

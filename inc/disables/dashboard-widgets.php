@@ -2,7 +2,7 @@
 /**
  * Disabling dashboard widgets
  *
- * @package mountains
+ * @package la_mountains
  */
 
 /**

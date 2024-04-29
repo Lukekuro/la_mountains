@@ -8,7 +8,7 @@
  * @link https://developer.wordpress.org/reference/functions/register_taxonomy/
  * @link https://developer.wordpress.org/resource/dashicons/
  *
- * @package mountains
+ * @package la_mountains
  */
 
 ?>
@@ -19,14 +19,14 @@
  * @return void
  */
 function itm_custom_init() {
-	// CPT: Project.
+	// CPT: Mountain.
 	$labels = array(
-		'name'          => __( 'Projects', 'mountains' ),
-		'singular_name' => __( 'Project', 'mountains' ),
+		'name'          => __( 'Mountains', 'la_mountains' ),
+		'singular_name' => __( 'Mountain', 'la_mountains' ),
 	);
 
 	$args = array(
-		'label'               => __( 'Project', 'mountains' ),
+		'label'               => __( 'Mountain', 'la_mountains' ),
 		'labels'              => $labels,
 		'description'         => '',
 		'public'              => true,
@@ -43,34 +43,15 @@ function itm_custom_init() {
 		'map_meta_cap'        => true,
 		'hierarchical'        => false,
 		'rewrite'             => array(
-			'slug'       => 'project',
+			'slug'       => 'mountain',
 			'with_front' => true,
 		),
 		'query_var'           => true,
-		'supports'            => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+		'supports'            => array( 'title', 'thumbnail', 'revisions' ),
 		// @phpcs:disable // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
 	);
 
-	register_post_type( 'project', $args );
-
-	// taxonomy: Project Category.
-	register_taxonomy(
-		'project-category',
-		array( 'project' ), /* name of CPT */
-		array(
-			'labels'            => array(
-				'name'          => __( 'Project Categories', 'mountains' ),
-				'singular_name' => __( 'Project Category', 'mountains' ),
-				'add_new_item'  => __( 'Add New Category', 'mountains' ),
-			),
-			'hierarchical'      => true,     /* if this is true, it acts like categories */
-			'show_admin_column' => true,
-			'show_ui'           => true,
-			'query_var'         => true,
-			'rewrite'           => array( 'slug' => 'project-category' ),
-		)
-	);
-
+	register_post_type( 'mountain', $args );
 }
 
-// add_action( 'init', 'itm_custom_init' );
+add_action( 'init', 'itm_custom_init' );

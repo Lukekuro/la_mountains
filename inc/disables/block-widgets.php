@@ -2,7 +2,7 @@
 /**
  * Restoring the classic Widgets Editor
  *
- * @package mountainser
+ * @package la_mountainser
  */
 
 /**

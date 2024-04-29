@@ -4,13 +4,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package mountains
+ * @package la_mountains
  */
 
 ?>
 
 <article class="article article-no-results">
 	<div class="article__content">
-		<h3 class="article__title"><?php esc_html_e( 'Nothing Found', 'mountains' ); ?></h3>
+		<h3 class="article__title"><?php esc_html_e( 'Nothing Found', 'la_mountains' ); ?></h3>
 	</div>
 </article>

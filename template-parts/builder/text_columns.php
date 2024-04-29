@@ -2,7 +2,7 @@
 /**
  * Text columns builder part
  *
- * @package mountainser
+ * @package la_mountainser
  */
 
 $count = ! empty( get_sub_field( 'columns' ) ) ? count( get_sub_field( 'columns' ) ) : 0; ?>

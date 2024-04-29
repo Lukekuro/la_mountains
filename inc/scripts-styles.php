@@ -9,7 +9,7 @@
  * @link https://developer.wordpress.org/reference/functions/wp_dequeue_style/
  * @link https://developer.wordpress.org/reference/functions/wp_dequeue_script/
  *
- * @package mountains
+ * @package la_mountains
  */
 
 $ver = time(); // time() - value for development, wp_get_theme()->get( 'Version' ) - format for production.

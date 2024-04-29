@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/reference/hooks/after_setup_theme/
  *
- * @package mountains
+ * @package la_mountains
  */
 
 if ( ! function_exists( 'itm_setup' ) ) :
@@ -20,9 +20,9 @@ if ( ! function_exists( 'itm_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on IT Starter, use a find and replace
-		 * to change 'mountains' to the name of your theme in all the template files.
+		 * to change 'la_mountains' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'mountains', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'la_mountains', get_template_directory() . '/languages' );
 
 		/*
 		 * Let WordPress manage the document title.
@@ -53,8 +53,8 @@ if ( ! function_exists( 'itm_setup' ) ) :
 		 */
 		register_nav_menus(
 			[
-				'main'   => esc_html__( 'Main Nav', 'mountains' ),
-				'footer' => esc_html__( 'Footer Nav', 'mountains' ),
+				'main'   => esc_html__( 'Main Nav', 'la_mountains' ),
+				'footer' => esc_html__( 'Footer Nav', 'la_mountains' ),
 			]
 		);
 

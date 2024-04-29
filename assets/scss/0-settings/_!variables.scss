@@ -1,7 +1,7 @@
 // Colors -------------------------------------------
 $primary: #414F6B;
 $primary-hover: darken($primary, 10%);
-$secondary: #38bdf8;
+$secondary: #63769d;
 $secondary-hover: darken($secondary, 8%);
 
 // Bootstrap v5.3.0 fix (dark mode support)
@@ -70,8 +70,7 @@ $grid-gutter-width: 30px; // 15px on each side
 $container-max-widths: (
 				xs: 100%,
 				md: 100%,
-				lg: 100%,
-				xl: 1400px,
+				lg: 1060px,
 );
 
 // Container padding
@@ -83,7 +82,7 @@ $container-gutter-x-values: (
 );
 
 // Container fluid maximum width
-$container-fluid-max-width: 1010px;
+$container-fluid-max-width: 1920px;
 
 /*
  * Global CSS Variables:
@@ -99,5 +98,5 @@ $container-fluid-max-width: 1010px;
 	}
 
 	--header-height: #{rem(100)}; // needed for fixed header
-	--header-scrolled-height: #{rem(70)}; // needed for fixed header
+	--header-scrolled-height: #{rem(75)}; // needed for fixed header
 }

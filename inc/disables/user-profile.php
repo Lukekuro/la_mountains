@@ -2,7 +2,7 @@
 /**
  * Remove user profile fields
  *
- * @package mountainser
+ * @package la_mountainser
  */
 
 /**

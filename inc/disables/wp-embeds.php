@@ -2,7 +2,7 @@
 /**
  * Disable wp-embed.js
  *
- * @package mountainser
+ * @package la_mountainser
  */
 
 /**

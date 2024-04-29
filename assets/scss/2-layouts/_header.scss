@@ -25,9 +25,49 @@
 		gap: rem(30);
 	}
 
-	.site-logo {
+	.site-block-logo {
 		margin-right: auto;
 		z-index: 3;
+	}
+
+	.logo-text {
+		opacity: 0;
+		transition: opacity $time;
+		
+		.is-scrolled & {
+			opacity: 1;
+		}
+
+		span:first-of-type {
+			color: $grey-dark;
+		}
+
+		span:last-of-type {
+			color: $primary;
+		}
+	}
+}
+
+.site-block-logo {
+	display: flex;
+	align-items: center;
+	gap: rem(10);
+
+	.logo-text {
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	span {
+		font-size: rem(27);
+		font-family: $font-bebas;
+		letter-spacing: 0.8px;
+		line-height: 0.8;
+	}
+
+	span:last-of-type {
+		letter-spacing: 1.9px;
 	}
 }
 

@@ -3,7 +3,7 @@
  * Pagination
  *
  * @link https://developer.wordpress.org/reference/functions/paginate_links/
- * @package mountainser
+ * @package la_mountainser
  */
 
 ?>
@@ -21,8 +21,8 @@
 				'end_size'     => 2,
 				'mid_size'     => 1,
 				'prev_next'    => true,
-				'prev_text'    => __( '&larr; Prev', 'mountains' ),
-				'next_text'    => __( 'Next &rarr;', 'mountains' ),
+				'prev_text'    => __( '&larr; Prev', 'la_mountains' ),
+				'next_text'    => __( 'Next &rarr;', 'la_mountains' ),
 				'add_args'     => false,
 				'add_fragment' => '',
 			)

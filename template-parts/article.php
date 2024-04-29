@@ -2,7 +2,7 @@
 /**
  * Article template part
  *
- * @package mountainser
+ * @package la_mountainser
  */
 
 ?>
@@ -22,6 +22,6 @@
 		</div>
 		<h3 class="article__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 		<div class="article__excerpt"><?php itm_excerpt( 15 ); ?></div>
-		<a class="btn btn-primary article__more" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Read more', 'mountains' ); ?></a>
+		<a class="btn btn-primary article__more" href="<?php the_permalink(); ?>"><?php esc_html_e( 'Read more', 'la_mountains' ); ?></a>
 	</div>
 </article>

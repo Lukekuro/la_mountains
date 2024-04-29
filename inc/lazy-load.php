@@ -2,7 +2,7 @@
 /**
  * Lazy Loading module
  *
- * @package mountains
+ * @package la_mountains
  */
 
 /**

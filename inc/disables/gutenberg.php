@@ -2,7 +2,7 @@
 /**
  * Disable gutenberg stuff
  *
- * @package mountains
+ * @package la_mountains
  */
 
 /**

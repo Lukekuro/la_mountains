@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package mountains
+ * @package la_mountains
  */
 
 $logo     = get_field( 'logo', 'option' );
@@ -34,14 +34,20 @@ $extra_classes = $has_hero ? 'has-hero' : ''; // page with Hero requires extra h
 
 <body <?php body_class( $extra_classes ); ?> id="top">
 <?php wp_body_open(); ?>
-<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'mountains' ); ?></a>
+<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'la_mountains' ); ?></a>
 
 <header class="site-header">
 	<div class="container">
 		<?php if ( $logo ) : ?>
-			<a href="<?php echo esc_url( home_url() ); ?>" class="site-logo" rel="home">
-				<?php echo wp_get_attachment_image( $logo, 'medium' ); ?>
-			</a>
+			<div class="site-block-logo">
+				<a href="<?php echo esc_url( home_url() ); ?>" class="site-logo" rel="home">
+					<?php echo wp_get_attachment_image( $logo, 'medium' ); ?>
+				</a>
+				<div class="logo-text">
+					<span><?php echo esc_html( 'losangeles' ); ?></span>
+					<span><?php echo esc_html( 'mountains' ); ?></span>
+				</div>
+			</div>
 		<?php endif; ?>
 
 		<nav class="main-nav">
@@ -57,7 +63,7 @@ $extra_classes = $has_hero ? 'has-hero' : ''; // page with Hero requires extra h
 			);
 			?>
 		</nav>
-		<span class="icon-burger hidden-lg-up" aria-label="<?php esc_html_e( 'Toggle navigation', 'mountains' ); ?>"><i></i></span>
+		<span class="icon-burger hidden-lg-up" aria-label="<?php esc_html_e( 'Toggle navigation', 'la_mountains' ); ?>"><i></i></span>
 	</div>
 </header>
 

@@ -2,7 +2,7 @@
 /**
  * Admin Bar modifications
  *
- * @package mountains
+ * @package la_mountains
  */
 
 /**

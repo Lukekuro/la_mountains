@@ -2,7 +2,7 @@
 /**
  * Flexible Content
  *
- * @package mountains
+ * @package la_mountains
  */
 
 $index = 1;

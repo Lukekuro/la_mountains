@@ -2,7 +2,7 @@
 /**
  * Related posts template
  *
- * @package mountainser
+ * @package la_mountainser
  */
 
 $args  = array(
@@ -13,7 +13,7 @@ $args  = array(
 $query = new WP_Query( $args ); ?>
 <?php if ( $query->have_posts() ) : ?>
 	<section class="post-related">
-		<h2 class="post-related__title"><?php esc_html_e( 'Our latest news', 'mountains' ); ?></h2>
+		<h2 class="post-related__title"><?php esc_html_e( 'Our latest news', 'la_mountains' ); ?></h2>
 		<div class="row">
 			<?php
 			while ( $query->have_posts() ) :

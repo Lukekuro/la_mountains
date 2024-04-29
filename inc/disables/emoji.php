@@ -2,7 +2,7 @@
 /**
  * Disable the emoji's
  *
- * @package mountains
+ * @package la_mountains
  */
 
 /**

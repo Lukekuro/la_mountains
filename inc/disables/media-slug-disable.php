@@ -2,7 +2,7 @@
 /**
  * Disable media slug
  *
- * @package mountains
+ * @package la_mountains
  */
 
 // Disable media slug.

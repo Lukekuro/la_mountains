@@ -2,7 +2,7 @@
 /**
  * Disables themes and plugins auto-updates
  *
- * @package mountainser
+ * @package la_mountainser
  */
 
 add_filter( 'auto_update_plugin', '__return_false' );

@@ -71,7 +71,7 @@
                 "id": ""
             },
             "acfe_save_meta": 0,
-            "default_value": "rgba(0,0,0,0.4)",
+            "default_value": "",
             "enable_opacity": 1,
             "return_format": "string"
         },
@@ -81,7 +81,35 @@
             "name": "background_image",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Recommended image size: 1600x900px.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_save_meta": 0,
+            "uploader": "",
+            "return_format": "id",
+            "acfe_thumbnail": 0,
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium_large",
+            "library": "all"
+        },
+        {
+            "key": "field_662f6a1df0273",
+            "label": "Background Image - mobile",
+            "name": "background_image_mobile",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Recommended image size: 700x700px.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -129,5 +157,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1714143666
+    "modified": 1714384066
 }

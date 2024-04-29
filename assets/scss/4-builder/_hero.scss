@@ -24,8 +24,20 @@
 			left: 0;
 		}
 
-		&-video {
+		&__lg {
+			display: none;
 
+			@include min(md) {
+				display: block;
+			}
+		}
+
+		&__md {
+			display: block;
+
+			@include min(md) {
+				display: none;
+			}
 		}
 	}
 

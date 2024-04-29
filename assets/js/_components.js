@@ -6,6 +6,4 @@ import './components/skip-link-focus-fix'; // mobile helper
 import './components/to-top'; // To top button
 import './components/ajax'; // Custom AJAX scripts
 
-import './components/accordion';
 import './components/tabs';
-import './components/toggle';

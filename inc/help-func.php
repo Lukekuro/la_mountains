@@ -2,7 +2,7 @@
 /**
  * Custom functions which help to speed up development
  *
- * @package mountains
+ * @package la_mountains
  */
 
 /**
@@ -24,7 +24,7 @@ function itm_posted_on() {
 
 	$posted_on = sprintf(
 	// Translators: %s: post date.
-		esc_html_x( 'Posted on %s', 'post date', 'mountains' ),
+		esc_html_x( 'Posted on %s', 'post date', 'la_mountains' ),
 		$time_string
 	);
 
@@ -36,7 +36,7 @@ function itm_posted_on() {
  * Prints HTML with meta information for the current author.
  */
 function itm_posted_by() {
-	$byline = sprintf( /* translators: %s: post author. */ esc_html_x( 'by %s', 'post author', 'mountains' ), '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>' );
+	$byline = sprintf( /* translators: %s: post author. */ esc_html_x( 'by %s', 'post author', 'la_mountains' ), '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>' );
 
 	echo '<span class="byline"> ' . $byline . '</span>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
@@ -45,10 +45,10 @@ function itm_posted_by() {
  * Prints HTML with meta information for the post categories.
  */
 function itm_cat_links() {
-	$categories_list = get_the_category_list( esc_html__( ', ', 'mountains' ) );
+	$categories_list = get_the_category_list( esc_html__( ', ', 'la_mountains' ) );
 	if ( $categories_list ) {
 		// Translators: category list.
-		printf( '<div class="cat-links">' . esc_html__( 'Posted in %1$s', 'mountains' ) . '</div>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		printf( '<div class="cat-links">' . esc_html__( 'Posted in %1$s', 'la_mountains' ) . '</div>', $categories_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
@@ -59,7 +59,7 @@ function itm_tag_links() {
 	$tags_list = get_the_tag_list( '', ', ' );
 	if ( $tags_list ) {
 		// Translators: tags list.
-		printf( '<div class="tag-links">' . esc_html__( 'Tagged %1$s', 'mountains' ) . '</div>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		printf( '<div class="tag-links">' . esc_html__( 'Tagged %1$s', 'la_mountains' ) . '</div>', $tags_list ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
@@ -116,31 +116,6 @@ add_shortcode( 'email', 'itm_hide_email_shortcode' );
  */
 function itm_image_placeholder() {
 	echo '<span class="img-placeholder"><svg id="image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm16 336c0 8.822-7.178 16-16 16H48c-8.822 0-16-7.178-16-16V112c0-8.822 7.178-16 16-16h416c8.822 0 16 7.178 16 16v288zM112 232c30.928 0 56-25.072 56-56s-25.072-56-56-56-56 25.072-56 56 25.072 56 56 56zm0-80c13.234 0 24 10.766 24 24s-10.766 24-24 24-24-10.766-24-24 10.766-24 24-24zm207.029 23.029L224 270.059l-31.029-31.029c-9.373-9.373-24.569-9.373-33.941 0l-88 88A23.998 23.998 0 0 0 64 344v28c0 6.627 5.373 12 12 12h360c6.627 0 12-5.373 12-12v-92c0-6.365-2.529-12.47-7.029-16.971l-88-88c-9.373-9.372-24.569-9.372-33.942 0zM416 352H96v-4.686l80-80 48 48 112-112 80 80V352z"/></svg></span>';
-}
-
-
-/**
- * Inline SVG
- *
- * @param string $svg_url - the URL to your SVG file you want to inline.
- */
-function itm_inline_svg( $svg_url ) {
-	$svg_content = '';
-	$extension   = pathinfo( $svg_url, PATHINFO_EXTENSION );
-
-	if ( 'svg' === $extension ) { // Also I'd add some extra security check for mime type.
-		if ( str_contains( $svg_url, home_url() ) ) {
-			$path        = str_replace( home_url( '/' ), '', $svg_url );
-			$svg_content = file_get_contents( ABSPATH . $path );
-		} else {
-			$remote_svg_file = wp_remote_get( $svg_url, [ 'sslverify' => false ] );
-			$svg_content     = wp_remote_retrieve_body( $remote_svg_file );
-		}
-	} else {
-		$svg_content = '<img alt="" src="' . $svg_url . '">';
-	}
-
-	return $svg_content;
 }
 
 

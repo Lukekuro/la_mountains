@@ -2,7 +2,7 @@
 /**
  * General recommended updates
  *
- * @package mountains
+ * @package la_mountains
  */
 
 /**

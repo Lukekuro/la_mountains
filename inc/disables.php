@@ -3,7 +3,7 @@
  * Disabling file
  * Disabling some WordPress core features to improve performance and security.
  *
- * @package mountains
+ * @package la_mountains
  */
 
 /**

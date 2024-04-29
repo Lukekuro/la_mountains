@@ -2,7 +2,7 @@
 /**
  * Anchor builder part
  *
- * @package mountainser
+ * @package la_mountainser
  */
 
 $anchor_id = get_sub_field( 'anchor_id' ); ?>

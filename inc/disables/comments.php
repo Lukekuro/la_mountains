@@ -2,7 +2,7 @@
 /**
  * Disable Comments
  *
- * @package mountains
+ * @package la_mountains
  */
 
 add_action(

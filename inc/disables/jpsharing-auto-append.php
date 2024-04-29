@@ -2,7 +2,7 @@
 /**
  * Disable auto append of sharing buttons after content and excerpt
  *
- * @package mountains
+ * @package la_mountains
  */
 
 add_action( 'init', 'itm_disable_jpsharing_append' );

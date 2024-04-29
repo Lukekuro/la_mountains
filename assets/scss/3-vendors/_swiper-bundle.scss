@@ -37,44 +37,26 @@ $themeColor: $w;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: rem(5);
 
 	&-bullet {
-		width: rem(26);
-		height: rem(26);
-		background-color: transparent;
-		opacity: 1;
+		width: rem(10);
+		height: rem(10);
+		background-color: $w;
+		opacity: 0.5;
 		margin: 0 !important;
 		position: relative;
-
-		&:after {
-			content: '';
-			width: rem(8);
-			height: rem(8);
-			background-color: $w;
-			border-radius: 50%;
-			position: absolute;
-			top: calc(50% - rem(4));
-			left: calc(50% - rem(4));
-			transition: transform $time ease-out;
-		}
+		transition: opacity $time;
 
 		&:not(.swiper-pagination-bullet-active) {
-			&:hover {
-				&:after {
-					transform: scale(1.5);
-				}
+			@include hover {
+				opacity: 1;
 			}
 		}
 
 		&-active {
-			width: rem(16);
-			height: rem(16);
-			background-color: transparent;
 			pointer-events: none;
-
-			&:after {
-				transform: scale(2);
-			}
+			opacity: 1;
 		}
 	}
 }

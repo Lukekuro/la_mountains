@@ -10,7 +10,7 @@ const
 		build: 'dist/'
 	},
 	url = 'http://starter2.local',
-	themeTextDomain = 'mountains', // run `gulp textdomain` separately for replacing domain
+	themeTextDomain = 'la_mountains', // run `gulp textdomain` separately for replacing domain
 
 	isGutenberg = false, // whether using Gutenberg in theme or not
 
@@ -51,7 +51,7 @@ const onError = function (err) {
 function textdomain() {
 
 	return gulp.src('./**/*', {ignore: ['gulpfile.js', dir.nm]})
-		.pipe(replace('mountains', themeTextDomain))
+		.pipe(replace('la_mountains', themeTextDomain))
 		.pipe(gulp.dest('./'));
 
 }

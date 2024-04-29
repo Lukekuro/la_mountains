@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/reference/hooks/wp_ajax_action/
  *
- * @package mountainser
+ * @package la_mountainser
  */
 
 // @codingStandardsIgnoreStart
@@ -15,3 +15,4 @@ function it_custom_action() {
 	wp_die();
 }
 // @codingStandardsIgnoreEnd
+*/

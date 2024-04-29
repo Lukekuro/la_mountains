@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package mountains
+ * @package la_mountains
  */
 
 get_header();
@@ -38,7 +38,7 @@ the_post();
 
 					wp_link_pages(
 						array(
-							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mountains' ),
+							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'la_mountains' ),
 							'after'  => '</div>',
 						)
 					);
@@ -47,8 +47,8 @@ the_post();
 					<?php
 					the_post_navigation(
 						array(
-							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'mountains' ) . '</span> <span class="nav-title">%title</span>',
-							'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'mountains' ) . '</span> <span class="nav-title">%title</span>',
+							'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'la_mountains' ) . '</span> <span class="nav-title">%title</span>',
+							'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'la_mountains' ) . '</span> <span class="nav-title">%title</span>',
 						)
 					);
 
